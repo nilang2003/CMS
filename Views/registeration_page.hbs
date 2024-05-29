@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/registeration_page.css" />
+    <script type="text/javascript" src="/js/registeration_page.js"></script>
+    <title>CMS Registeration</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="register_main">
+                <div class="form_heading">
+                    <h1>Registeration Page</h1>
+                </div>
+
+                <div class="register_form">
+                    <form id="registrationForm" action="api/register/registeration" method="POST" enctype="multipart/form-data" novalidate>
+                        <select class="select_user_input" id="usertype" name="usertype" onchange="enable_disable()">
+                            <option value="Admin">Lead</option>
+                            {{! <option value="faculty">Faculty</option> }}
+                            <option value="Core-member">Core-Member</option>
+                            <option value="User">User</option>
+                        </select>
+
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name: "
+                            required />
+
+                        <select id="institute" name="institute" onchange="institute_change('institute', 'department')">
+                            <option value="CSPIT">CSPIT</option>
+                            <option value="DEPSTAR">DEPSTAR</option>
+                        </select>
+
+                        <select id="department" name="department">
+                        </select>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email: " required />
+
+                        <input type="text" id="idno" name="idno" placeholder="Enter your Id number: " required />
+
+                        <div class="club_name_input" id="input_club_name" name="input_club_name">
+                            <input type="text" id="club_name" placeholder="Enter The Club Name: " required />
+                        </div>
+
+                        <div class="club_description_input" id="input_club_desc" name="input_club_desc">
+                            <textarea id="club_description" cols="30" rows="40"
+                                placeholder="Enter description about your club"></textarea>
+                        </div>
+
+                        <div id="club_logo_input" name="club_logo_input">
+                            <p class="p_18">Upload Club logo</p>
+                            <input type="file" id="club_logo" />
+                        </div>
+
+                        {{! <input type="text" id="faculty_id" placeholder="Enter the Faculty id: " name="faculty_id">
+                        }}
+
+                        <select class="select_user_gender" id="gender" name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+
+                        <input type="number" id="age" name="age" placeholder="Enter your age: " required />
+                        <input type="password" id="password" name="password" placeholder="Create password: " required />
+                        <input type="password" id="confirm_register_password" name="confirm_register_password"
+                            placeholder="Confirm password: " required />
+
+                        <div class="submit_clear">
+                            <input type="submit" value="Submit"/>
+                            <input type="reset" value="Clear" />
+                        </div>
+
+                        <a href="./login">Back to sign in</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
