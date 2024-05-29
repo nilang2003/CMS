@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    font-style: normal;
+    overflow-x: auto;
+    position: relative;
+    z-index: -1;
+    font-family: 'Manrope', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --dark-blue: #0A2A71;
+    --sky-blue: #4199C9;
+    --pista-green: #54BCB3;
+    --opacity-green: rgb(84 188 179 / 44%);
+    --pera-black: #3E3E3E;
+    --btn-green: #7DBBB2;
+    --light-blue: #5798C5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+.button {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 26.1px;
+    font-weight: 700;
+    color: #ED462F;
+    display: inline-block;
+    background: #FBE8D3;
+    border-radius: 30px;
+    padding: 17px 77px 17px 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.p_18 {
+    font-size: 18px;
+}
+
+.main {
+    background-color: rgb(173, 216, 230);
+}
+
+.register_main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form_heading {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form_heading {
+    margin-bottom: 40px;
+}
+
+.register_form input,
+select,
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.club_description_input textarea {
+    resize: none;
+    overflow-y: scroll;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+.register_form {
+    background: rgba(241, 240, 239, 0.557);
+    padding: 30px;
+    text-align: center;
+}
+
+.club_logo_input {
+    text-align: center;
+}
